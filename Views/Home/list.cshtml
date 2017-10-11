@@ -1,0 +1,18 @@
+<h1>Tamagotchi List</h1>
+<ul>
+  @foreach(var Tamagotchi in Model)
+  {
+    <ul>
+      <li>@Tamagotchi.GetName()</li>
+      <ul>
+        <li>@Tamagotchi.GetFood()</li>
+        <li>@Tamagotchi.GetAttention()</li>
+        <li>@Tamagotchi.GetRest()</li>
+      </ul>
+    </ul>
+  }
+</ul>
+<p><a href="/">Add another Tamagotchi</a></p>
+@* <form action="/car/list/clear" method="post">
+  <button type="submit" name="button">Clear All Cars</button>
+</form> *@

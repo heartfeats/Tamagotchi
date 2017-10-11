@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 
-namespace Tamagotchi.Models
+namespace TamagotchiGame.Models
 {
-  public class Tama
+  public class Tamagotchi
   {
     private string _name;
     private int _food;
     private int _attention;
     private int _rest;
-    private static List<Tama> _instances = new List<Tama> {};
+    private static List<Tamagotchi> _instances = new List<Tamagotchi> {};
 
     //this is the constructor
-    public Tama (string name)
+    public Tamagotchi (string name)
     {
       _name = name;
       _food = 50;
@@ -63,6 +63,11 @@ namespace Tamagotchi.Models
     public void Save()
     {
       _instances.Add(this);
+    }
+
+    public static List<Tamagotchi> GetAll()
+    {
+      return _instances;
     }
     // public static void ClearAll()
     // {
